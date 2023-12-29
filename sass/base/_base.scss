@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/*$breakpoint argument choices:
+-phone
+-tab-port
+- tab-land
+- big-desktop
+
+
+MEDIA QUERY MANAGER
+0-600px: phone
+601-900: tablet portrait
+901-1200px: tablet landscape
+1201-1800px: is where our normal styles apply
+1800px +: Big desktop
+*/
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 40%;
+  }
+
+  
+  
+}
+
+body {
+  font-family: "Lato", "sans-serif";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-color: $color-gray-light-1;
+
+  @include respond(tab-port) {
+    padding: 0;
+    
+    }
+
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
