@@ -56,6 +56,11 @@ html {
     font-size: 40%;
   }
 }
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 70%;
+  }
+}
 
 body {
   font-family: "Lato", "sans-serif";
@@ -214,7 +219,7 @@ body {
   position: relative;
 }
 .composition__photo {
-  width: 55%;
+  width: 50%;
   position: absolute;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   z-index: 10;
@@ -837,10 +842,15 @@ body {
   hyphens: auto;
 }
 
+.section {
+  max-width: 94rem;
+}
+
 section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh;
+  margin-bottom: 6rem;
 }
 @media only screen and (max-width: 56.25em) {
   section-about {
@@ -849,8 +859,14 @@ section-about {
   }
 }
 
+.about-text {
+  margin: 5rem 10rem;
+  padding: 6rem 10rem;
+}
+
 .section-features {
-  padding: 20rem 0;
+  padding: 10rem 0;
+  margin-top: 8rem;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url("../img/nat-4.jpg");
   background-size: cover;
   transform: skewY(-7deg);
