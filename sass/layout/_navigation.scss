@@ -1,3 +1,19 @@
+.desktop-nav {
+  width: 80%;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-evenly;
+
+  li {
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
 .navigation {
   &__checkbox {
     display: none;

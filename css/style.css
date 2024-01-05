@@ -215,6 +215,10 @@ body {
   margin-top: -12rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .composition {
   position: relative;
 }
@@ -1124,6 +1128,20 @@ section-about {
     width: 100%;
     float: none;
   }
+}
+
+.desktop-nav {
+  width: 80%;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-evenly;
+}
+.desktop-nav li {
+  list-style: none;
+}
+.desktop-nav__link {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .navigation__checkbox {

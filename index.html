@@ -11,23 +11,39 @@
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-
+    "
     <title>Natours | Exciting tours for adventurous people</title>
-    <script src="index.js" defer>
-        const about = document.querySelector("#about");
-        const benefits = document.querySelector("#benefits");
-        const secTours = document.querySelector("#section-tours");
-        const stories = document.querySelector("#stories");
-        const book = document.querySelector("#book");
 
-        console.log("Maybe");
+    <script>
+
+        const navItem1 = document.getElementById("nav-item-1")
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById("navigation__link");
+            if (section) {
+
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
 
     </script>
 </head>
 
 <body>
+    <div class="desktop-nav">
+        <ul>
+            <li><a desktop-nav__link href="#about">About</a></li>
+            <li><a desktop-nav__link href="#benefits">Benefits</a></li>
+            <li><a desktop-nav__link href="#section-tours">Tours</a></li>
+            <li><a desktop-nav__link href="#stories">Stories</a></li>
+            <li><a desktop-nav__link href="#book">Book</a></li>
+        </ul>
+    </div>
 
-    <div class="navigation">
+
+
+
+    <div class="navigation hidden">
         <input id="navi-toggle" type="checkbox" class="navigation__checkbox">
 
         <label for="navi-toggle" class="navigation__button">
@@ -36,20 +52,23 @@
 
         <div class="navigation__background">nbsp;</div>
 
-        <nav class="navigation__nav">
+        <nav class="navigation__nav mobile-nav">
             <ul class="navigation__list">
-                <li class="navigation__item"> <a href="#about" class="navigation__link"> <span>01</span>About
-                        Natours</a>
+                <li class="navigation__item"> <a href="#about" target="_blank" class="navigation__link">
+                        <span>01</span>About
+                        Natours</a></li>
+                <li class="navigation__item"> <a href="#benefits" target="_blank" class="navigation__link">
+                        <span>02</span>Benefits</a>
                 </li>
-                <li class="navigation__item"> <a href="#benefits" class="navigation__link"> <span>02</span>Your
-                        Benefits</a>
-                </li>
-                <li class="navigation__item"> <a href="#section-tours" class="navigation__link"> <span>03</span>Popular
+                <li class="navigation__item"> <a href="#section-tours" target="_blank" class="navigation__link">
+                        <span>03</span>Popular
                         Tours</a>
                 </li>
-                <li class="navigation__item"> <a href="#stories" class="navigation__link"> <span>04</span>Stories</a>
+                <li class="navigation__item"> <a href="#stories" target="_blank" class="navigation__link">
+                        <span>04</span>Stories</a>
                 </li>
-                <li class="navigation__item"> <a href="#book" class="navigation__link"> <span>05</span>Book Now</a></li>
+                <li class="navigation__item"> <a href="#book" target="_blank" class="navigation__link">
+                        <span>05</span>Book Now</a></li>
 
             </ul>
         </nav>
@@ -73,9 +92,10 @@
     </header>
 
     <main>
-        <section id="about" class="section--about">
+        <section class="section--about">
 
             <div class="u-center-text u-margin-bottom-big">
+
                 <h2 class="heading-secondary">
                     Exciting Tours for Adventurous People
                 </h2>
@@ -83,14 +103,21 @@
 
             <div class="row about-text">
                 <div class="col-1-of-2">
-                    <h3 class="heading-tertiary">You're going to fall in love with nature</h3>
-                    <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium iste
-                        doloribus consequatur fugit quae aliquid consectetur at est, qui ad error beatae adipisci nulla
+                    <h3 class="heading-tertiary">
+                        <a id="about">
+                            You're going to fall in love with nature
+                    </h3>
+                    </a>
+                    <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium
+                        iste
+                        doloribus consequatur fugit quae aliquid consectetur at est, qui ad error beatae adipisci
+                        nulla
                         iure quaerat accusamus. Voluptates magnam inventore nobis.</p>
 
                     <h3 class="heading-tertiary">Live adventurous like you never have before</h3>
 
-                    <p class="paragraph">Consectetur adipisicing elit. Sit laudantium iste doloribus consequatur fugit
+                    <p class="paragraph">Consectetur adipisicing elit. Sit laudantium iste doloribus consequatur
+                        fugit
                         quae aliquid consectetur at est, qui ad error beatae adipisci nulla iure quaerat accusamus.
                         Voluptates magnam inventore nobis.</p>
 
