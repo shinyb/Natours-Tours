@@ -246,16 +246,18 @@ body {
     top: 0;
     left: 0;
     transform: scale(1.2);
+    z-index: -10;
   }
 }
 .composition__photo-p2 {
   left: 0;
   top: 1rem;
+  z-index: 100;
 }
 @media only screen and (max-width: 56.25em) {
   .composition__photo-p2 {
     top: 0;
-    z-index: 100;
+    z-index: -10;
     transform: scale(1.4);
   }
 }
@@ -268,6 +270,7 @@ body {
     top: 0;
     left: 0;
     transform: scale(1.2);
+    z-index: -10;
   }
 }
 .composition__photo:hover {
@@ -986,6 +989,7 @@ section-about {
   position: absolute;
   top: 4rem;
   left: 4rem;
+  z-index: -10;
 }
 .header__logo {
   width: 5rem;
@@ -1131,19 +1135,33 @@ section-about {
 }
 
 .desktop-nav {
-  width: 80%;
   display: flex;
-  gap: 3rem;
-  justify-content: space-evenly;
+  height: 6rem;
+  margin-left: 90%;
+  margin-top: -3rem;
 }
 .desktop-nav li {
-  list-style: none;
-}
-.desktop-nav__link {
   display: inline-block;
-  text-decoration: none;
+  margin-left: 3rem;
+}
+.desktop-nav a {
+  display: inline-block;
+  color: #fff;
+}
+@media only screen and (max-width: 56.25em) {
+  .desktop-nav {
+    display: none;
+  }
 }
 
+.navigation {
+  opacity: 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .navigation {
+    opacity: 1;
+  }
+}
 .navigation__checkbox {
   display: none;
 }
@@ -1200,8 +1218,8 @@ section-about {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 20;
   opacity: 0;
+  z-index: 20;
   transition: all 0.8s;
 }
 .navigation__list {
@@ -1212,6 +1230,7 @@ section-about {
   text-align: center;
   list-style: none;
   width: 100%;
+  z-index: 200;
 }
 .navigation__item {
   margin: 1rem;

@@ -1,20 +1,31 @@
 .desktop-nav {
-  width: 80%;
   display: flex;
-  gap: 3rem;
-  justify-content: space-evenly;
+  height: 6rem;
+  margin-left: 90%;
+  margin-top: -3rem;
 
   li {
-    list-style: none;
+    display: inline-block;
+    margin-left: 3rem;
   }
 
-  &__link {
+  a {
     display: inline-block;
-    text-decoration: none;
+    color: $color-white;
+  }
+
+  @include respond(tab-port) {
+    display: none;
   }
 }
 
 .navigation {
+  opacity: 0;
+
+  @include respond(tab-port) {
+    opacity: 1;
+  }
+
   &__checkbox {
     display: none;
   }
@@ -72,8 +83,8 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 20;
     opacity: 0;
+    z-index: 20;
     transition: all 0.8s;
   }
 
@@ -85,6 +96,7 @@
     text-align: center;
     list-style: none;
     width: 100%;
+    z-index: 200;
   }
 
   &__item {

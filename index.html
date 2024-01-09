@@ -15,40 +15,48 @@
     <title>Natours | Exciting tours for adventurous people</title>
 
     <script>
+        const navigation = document.querySelector(".navigation")
+        const desktopNav = document.querySelector(".desktop-nav")
 
-        const navItem1 = document.getElementById("nav-item-1")
 
-        function scrollToSection(sectionId) {
+
+
+        function hidden() {
+            if (window.innerWidth < 900) {
+
+                navigation.style.display = "inline";
+            } else {
+                navigation.style.display = "none";
+
+            }
+
+        }
+
+
+
+       /* function scrollToSection(sectionId) {
             const section = document.getElementById("navigation__link");
             if (section) {
 
                 section.scrollIntoView({ behavior: 'smooth' });
             }
-        }
+        }*/
 
     </script>
 </head>
 
 <body>
-    <div class="desktop-nav">
-        <ul>
-            <li><a desktop-nav__link href="#about">About</a></li>
-            <li><a desktop-nav__link href="#benefits">Benefits</a></li>
-            <li><a desktop-nav__link href="#section-tours">Tours</a></li>
-            <li><a desktop-nav__link href="#stories">Stories</a></li>
-            <li><a desktop-nav__link href="#book">Book</a></li>
-        </ul>
-    </div>
 
 
 
 
-    <div class="navigation hidden">
+    <div class="navigation">
         <input id="navi-toggle" type="checkbox" class="navigation__checkbox">
 
         <label for="navi-toggle" class="navigation__button">
             <span class="navigation__icon"></span>
         </label>
+
 
         <div class="navigation__background">nbsp;</div>
 
@@ -75,9 +83,21 @@
     </div>
 
 
-    <header class="header">
+    <header class="header" id="#home">
         <div class="header__logo-box">
-            <img class="header__logo" src="img/logo-white.png" alt="logo white"></img>
+            <a href="#home"><img class="header__logo" src="img/logo-white.png" alt="logo white"></img></a>
+
+
+            <ul class="desktop-nav">
+                <li><a desktop-nav__link href="#home">Home</a></li>
+                <li><a desktop-nav__link href="#about">About</a></li>
+                <li><a desktop-nav__link href="#benefits">Benefits</a></li>
+                <li><a desktop-nav__link href="#section-tours">Tours</a></li>
+                <li><a desktop-nav__link href="#stories">Stories</a></li>
+                <li><a desktop-nav__link href="#book">Book</a></li>
+            </ul>
+
+
         </div>
 
         <div class="header__text-box">
